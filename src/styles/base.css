@@ -1,0 +1,480 @@
+:root {
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --bold: 600;
+    --extra-bold: 700;
+    font-family: "Fira Sans", sans-serif;
+    height: 100%;
+}
+
+body {
+    line-height: 1.35 !important;
+    font-family: "Fira Sans", sans-serif;
+    height: 100%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+h5 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+h6 {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/*  */
+.search-div {
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 16px 16px 24px 16px;
+    background-color: transparent;
+    /* #F7F9F8 */
+    width: calc(100% - 260px);
+}
+
+@media (max-width: 1024px) {
+    .search-div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .search-div {
+        width: 100%;
+    }
+}
+
+/*  */
+
+/* Chat Styles Input Box */
+.search-input {
+    width: 822px;
+    color: black;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 0;
+    background: #EDF3F2;
+    padding: 8px;
+    transition: border 0.3s ease;
+}
+
+.css-34fl05-MuiInputBase-root-MuiOutlinedInput-root {
+    background-color: #ffffff8a !important;
+}
+
+/* Chat Ouput Reponse  style */
+#highlight-content {
+    padding: 12px 42px 32px 42px;
+    font-size: 16px;
+    line-height: 26px;
+    background-color: #fff;
+    margin: 0;
+    color: #000;
+}
+
+#highlight-content>ul,
+div>ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+/* Ordered List */
+#highlight-content>ol>li {
+    margin-left: 1em;
+    list-style-type: none;
+}
+
+#highlight-content>ol>li>ul {
+    margin-left: 2.5em;
+    list-style-type: none;
+}
+
+#highlight-content>ol>ul>li {
+    margin-left: 2em;
+    list-style-type: none;
+}
+
+#highlight-content>ol>li>p {
+    margin-left: 1rem;
+    list-style-type: none;
+    font-size: 16px;
+}
+
+#highlight-content>ol>li>strong {
+    font-weight: 500 !important;
+    list-style-type: none;
+}
+
+#highlight-content ol:last-of-type {
+    margin: 0px 0px 22px 0px;
+}
+/* End */
+
+/* UnOrdered List */
+#highlight-content>ul>li {
+    margin-left: 1em;
+}
+
+#highlight-content>ul>li>ul {
+    margin-left: 2.5em;
+}
+
+#highlight-content>ul>li>p {
+    margin-left: 0.3rem;
+    list-style-type: none;
+    font-size: 16px;
+}
+
+#highlight-content>ul>li>strong {
+    font-weight: 500 !important;
+    list-style-type: none;
+}
+/* End */
+/*  */
+#highlight-content p {
+    font-size: 16px;
+}
+
+#highlight-content h4 {
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+#highlight-content h3:first-of-type {
+    margin: 1rem 0px 8px 0px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#highlight-content h3 {
+    font-size: 18px;
+    margin: 1rem 0 0 0;
+    font-weight: 600;
+}
+
+#highlight-content pre {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #2d2d2d;
+    color: #ffffff;
+    padding: 8px 8px 16px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin: 16px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position:relative;
+}
+#highlight-content pre code {
+    white-space: pre-wrap;
+    margin-top: 1rem;
+}
+.pre-div{
+    display: flex;
+    justify-content: end;
+}
+#highlight-content > pre #copy-button {
+    right: 1rem;
+    top: 0.5rem;
+    width: 6rem;
+    height: 2rem;
+    background-color: #fffffffc;
+    color: #000;
+    border: none;
+    padding: 6px;
+    font-size: 13px;
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: 0.8;
+    font-weight: 700;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+}
+/* END */
+
+/*  */
+#highlight-Question {
+    padding: 2rem 42px 0 42px;
+    font-weight: 500;
+    margin-bottom: 0;
+    font-size: 18px;
+    overflow: auto;
+}
+
+#highlight-Question>ul,
+div>ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#highlight-Question>ol>li>ul {
+    margin-left: 2em;
+    list-style-type: none;
+}
+
+#highlight-Question>ol>li>p {
+    margin-left: 1em;
+    list-style-type: none;
+    font-size: 16px;
+}
+
+#highlight-Question>ol>li>strong {
+    margin-left: 1em;
+    list-style-type: none;
+}
+
+#highlight-Question>ol>ul>li {
+    margin-left: 2em;
+    list-style-type: none;
+}
+
+#highlight-Question p {
+    font-size: 16px;
+}
+
+#highlight-Question h4 {
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+#highlight-Question h3:first-of-type {
+    margin: 0px 0px 8px 0px;
+    font-size: 18px;
+}
+
+#highlight-Question h3 {
+    font-size: 16px;
+}
+
+#highlight-Question ol:last-of-type {
+    margin: 0px 0px 22px 0px;
+}
+
+#highlight-Question p {
+    font-weight: 500 !important;
+    margin-bottom: 0;
+    font-size: 18px !important;
+}
+
+#highlight-Question code {
+    font-weight: 500 !important;
+    margin-bottom: 0;
+    font-size: 18px !important;
+    font-family: "Fira Sans", sans-serif;
+}
+
+#highlight-Question pre {
+    /* margin-left: -16px; */
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* --End-- */
+
+
+/* content page Button & Back button style */
+.create-agent {
+    background: #06403A;
+    color: #FFF;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 8px 16px;
+}
+
+.create-agent:hover {
+    background: #06403A;
+    color: #FFF;
+}
+
+.create-agent:focus {
+    background: #06403A;
+    color: #FFF,
+}
+
+.back-button {
+    background: transparent;
+    color: #000;
+    border: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.back-button:hover {
+    background: transparent;
+    border: 0;
+}
+
+.back-button:hover .back-icon {
+    color: #000;
+}
+
+.back-icon {
+    border: 0;
+    color: #BFCAC6;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    margin-right: 8px;
+}
+
+/* --End-- */
+
+/* chat output  */
+.display-question {
+    padding: 2rem 42px 0 42px;
+    font-weight: 500;
+    margin-bottom: 0;
+    font-size: 18px;
+    overflow: auto;
+}
+
+.display-question pre {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0px 16px 0px 0px;
+    overflow-x: auto;
+    white-space: pre;
+    width: 100%;
+    margin-left: -40px;
+}
+
+.display-question code {
+    overflow: hidden;
+    font-size: 18px;
+}
+
+.display-question>p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0;
+
+}
+
+
+
+
+.code-container {
+    position: relative;
+    margin: 20px auto;
+    max-width: 800px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    overflow: hidden;
+}
+
+.code-container pre {
+    margin: 0;
+    padding: 15px;
+    overflow: auto;
+    white-space: pre-wrap;
+    /* Allows code to wrap on small screens */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+}
+
+.code-container button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.code-container button:hover {
+    background-color: #0056b3;
+}
+
+.code-container button:active {
+    background-color: #004494;
+}
+
+/* Optional: Styling for scrollbar */
+.code-container pre::-webkit-scrollbar {
+    width: 10px;
+}
+
+.code-container pre::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+.code-container pre::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 5px;
+}
+
+.code-container pre::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+
