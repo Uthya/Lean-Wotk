@@ -113,7 +113,7 @@ const ChatOuputComponent: React.FC<ChatOutputProps> = ({ question, data }) => {
                 }, 6000);
             }
         }
-
+ 
         // Add a button to each <pre> element
         document.querySelectorAll('pre').forEach(pre => {
 
