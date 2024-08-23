@@ -231,7 +231,7 @@ div>ol {
     display: flex;
     justify-content: end;
 }
-#highlight-content > pre #copy-button {
+#highlight-content  #copy-button {
     right: 1rem;
     top: 0.5rem;
     width: 6rem;
