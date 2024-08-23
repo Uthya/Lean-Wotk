@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import { ChatAiContext } from '../index';
-import DoneAllIcon from '@mui/icons-material/DoneAll';
 interface ChatOutputProps {
     question: any | null;
     data: any | Promise<any> | null;
