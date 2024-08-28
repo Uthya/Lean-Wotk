@@ -46,6 +46,7 @@ const ChatPage: React.FC<ChatOutputProps> = ({ question, data }) => {
         try {
             setloading(true);
             setHistoryData([]);
+            setRelatedQuestion([]);
             summaryDetailsPayload.project_name = question;
             const sessionId = localStorage.getItem("SummaryPageSessionId") || "";
             const SummaryDetailsAPI = "https://api.leanworks.ai/dev/get_exec_summary_detail?"
@@ -86,6 +87,7 @@ const ChatPage: React.FC<ChatOutputProps> = ({ question, data }) => {
             setloading(true);
             setHistoryData([]);
             setRelatedQuestion([]);
+            setDataSource([]);
             const sessionId = localStorage.getItem("HomePageSessionId") || "";
             const historyChatAPI = "https://api.leanworks.ai/dev/get_conversation_history?"
             const params = new URLSearchParams({
@@ -136,7 +138,7 @@ const ChatPage: React.FC<ChatOutputProps> = ({ question, data }) => {
             });
             const response = await axios.get(RelatedQuestionAPI + params);
             const rawData = response.data.content;
-            setRelatedQuestion(rawData.map((item: { question: any }) => item.question));
+            setRelatedQuestion(rawData);
 
         } catch (error) {
             setloading(false);
@@ -161,7 +163,7 @@ const ChatPage: React.FC<ChatOutputProps> = ({ question, data }) => {
                                     ) : null
                                     }
                                 </Grid>
-                                {dataSource != undefined && dataSource.length > 0 ? (
+                                {dataSource != undefined && dataSource.length > 0  ? (
                                     <Grid item xs={4} md={3}>
                                         <Sources />
                                     </Grid>

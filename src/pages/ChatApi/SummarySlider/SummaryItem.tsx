@@ -2,13 +2,19 @@
 
 import Box from "@mui/material/Box";
 import { Fonts } from "@crema/constants/AppEnums";
-import { SummaryDetails } from "@crema/types/models/summary";
 import { useContext } from "react";
 import { lowerCase } from "lodash";
 import { ChatAiContext } from "../index";
 type Props = {
   data: SummaryDetails;
 };
+export type SummaryDetails = {
+  id: number;
+  project_name: string;
+  risk_level:string;
+  risk_description: string;
+  summary: string;
+  };
 const SummaryItem = ({ data }: Props) => {
   const { setisSummary,setQuestion,setChatData,setIsChat } = useContext(ChatAiContext);
   

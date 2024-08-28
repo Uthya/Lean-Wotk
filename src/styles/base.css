@@ -89,7 +89,7 @@ p {
     padding: 16px 16px 24px 16px;
     background-color: transparent;
     /* #F7F9F8 */
-    width: calc(100% - 260px);
+    width: calc(100% - 300px);
 }
 
 @media (max-width: 1024px) {
@@ -231,7 +231,7 @@ div>ol {
     display: flex;
     justify-content: end;
 }
-#highlight-content  #copy-button {
+#highlight-content > pre #copy-button {
     right: 1rem;
     top: 0.5rem;
     background-color: #fffffffc;
