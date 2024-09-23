@@ -51,7 +51,7 @@ const TiggerMail: React.FC<tiggerDetailsProps> = ({ Mails }) => {
             "session_id": localStorage.getItem("HomePageSessionId"),
             "client_name": "leanworks",
             "model_name": "gpt-4o-mini",
-            "subscribers": SubscribersEmails,
+            "subscribers": Mails,
             "name": sourceName,
             "subject": subject
         }
