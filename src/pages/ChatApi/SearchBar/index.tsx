@@ -24,14 +24,14 @@ const CustomTextField = styled(TextField)({
     },
     '&.Mui-focused fieldset': {
       borderColor: 'grey !important',
-      outline: 'none', 
+      outline: 'none',
     },
   },
 });
 
 const SearchBar: React.FC = () => {
 
-  const { setIsChat, setChatData, isSummary,SelectedRelatedQuestion } =  useContext(ChatAiContext);
+  const { setIsChat, setChatData, isSummary, SelectedRelatedQuestion } = useContext(ChatAiContext);
   const [SearchQuestion, setSearchQuestion] = useState("");
   const [isloading, setisloading] = useState(false);
   const [abortController, setAbortController] = useState<AbortController | null>(null);
@@ -45,10 +45,10 @@ const SearchBar: React.FC = () => {
   }
 
   useEffect(() => {
-      getChatResponse();
-  },[SelectedRelatedQuestion])
+    getChatResponse();
+  }, [SelectedRelatedQuestion])
 
- 
+
   const getChatResponse = async () => {
     payload.user_input = (SearchQuestion == null || SearchQuestion == undefined || SearchQuestion == '') ? SelectedRelatedQuestion : SearchQuestion;
     const sessionId = (isSummary ? localStorage.getItem("SummaryPageSessionId") || "" : localStorage.getItem("HomePageSessionId") || "");
@@ -60,7 +60,7 @@ const SearchBar: React.FC = () => {
     // Create a new AbortController
     const controller = new AbortController();
     setAbortController(controller);
-    
+
     if (payload.user_input != "") {
       try {
         setisloading(true);
@@ -134,6 +134,11 @@ const SearchBar: React.FC = () => {
       </div>
 
       {isloading ?
+        // <div className='loader'>
+        //   <div className="app-loader ">
+        //     <div className="loaderSpinner"></div>
+        //   </div>
+        // </div>
         <div className='loader'>
           <div className="app-loader ">
             <div className="loader-spin">

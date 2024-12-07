@@ -72,7 +72,7 @@ const AppSidebar: React.FC<AppSidebarProps> = ({
                 },
 
               }}
-              scrollToTop={false}
+              // scrollToTop={false}
             >
               <p style={{ fontFamily: "Fira Sans", fontSize: 24, color: "#000", textAlign: "center", paddingTop: "16px" }}> <span style={{ fontWeight: 600, fontStyle: "italic", fontSize: "28px" }}>Lean</span>Works.ai</p>
               <VerticalNav routesConfig={routesConfig} />

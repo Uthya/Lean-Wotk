@@ -1,9 +1,14 @@
 import Slider from "react-slick";
 import AppSummaryCard from "@crema/components/AppSummaryCard";
-import { SummaryDetails } from "@crema/types/models/summary";
 import SummarySlider from "./SummarySlider";
 import SummaryItem from "./SummaryItem";
-
+export type SummaryDetails = {
+  id: number;
+  project_name: string;
+  risk_level:string;
+  risk_description: string;
+  summary: string;
+  };
 type Props = {
   relatedCourses: SummaryDetails[];
 };

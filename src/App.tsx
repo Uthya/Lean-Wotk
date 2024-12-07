@@ -8,22 +8,17 @@ import InfoViewContextProvider from "@crema/context/AppContextProvider/InfoViewC
 import AuthRoutes from "@crema/components/AuthRoutes";
 import AppLayout from "@crema/core/AppLayout";
 import AppAuthProvider from "@crema/core/AppAuthProvider";
+import { v4 as uuidv4 } from 'uuid';
 import "@crema/mockapi";
 import "./styles/index.css";
 
 function App() {
 
-  const generateRandomString = (length: number) => {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let result = '';
-    for (let i = 0; i < length; i++) {
-      const randomIndex = Math.floor(Math.random() * characters.length);
-      result += characters[randomIndex];
-    }
-    return result;
-  };
-  localStorage.setItem("HomePageSessionId",generateRandomString(5))
-  localStorage.setItem("SummaryPageSessionId",generateRandomString(5))
+  const generateUUID = () => {
+    return uuidv4();
+  }
+   localStorage.setItem("HomePageSessionId",generateUUID());
+   localStorage.setItem("SummaryPageSessionId",generateUUID());
 
   return (
     <>

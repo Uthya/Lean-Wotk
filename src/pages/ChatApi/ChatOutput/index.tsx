@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import { ChatAiContext } from '../index';
-import DoneAllIcon from '@mui/icons-material/DoneAll';
 interface ChatOutputProps {
     question: any | null;
     data: any | Promise<any> | null;
@@ -115,7 +114,8 @@ const ChatOuputComponent: React.FC<ChatOutputProps> = ({ question, data }) => {
         }
 
         // Add a button to each <pre> element
-        document.querySelectorAll('pre').forEach(pre => {
+        
+        document.querySelectorAll('#highlight-content pre').forEach(pre => {
 
             if (!pre.querySelector('.pre-div')) {
                 const div = document.createElement('div');
@@ -132,7 +132,7 @@ const ChatOuputComponent: React.FC<ChatOutputProps> = ({ question, data }) => {
             
         });
 
-    }, [sanitizedMarkup]);
+    }, [sanitizedMarkup,historyResponse]);
 
     useEffect(() => {
         if (chatContainerRef.current) {
